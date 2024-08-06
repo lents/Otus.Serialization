@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
+    <PackageReference Include="Google.Protobuf" Version="3.27.2" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.27.2" />
+    <PackageReference Include="ProtoBuf" Version="2.6.1.1" />
+    <PackageReference Include="ProtoBuf-net" Version="3.1.22" />
+    <PackageReference Include="System.Runtime.Serialization.Formatters" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <Protobuf Include="person.proto" />
+  </ItemGroup>
+
+</Project>
