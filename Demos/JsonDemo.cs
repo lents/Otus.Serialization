@@ -27,7 +27,7 @@ namespace Otus.Serialization
             {
                 WriteIndented = true,
                 //Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
-                //PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
                 IncludeFields = true,
             };
 

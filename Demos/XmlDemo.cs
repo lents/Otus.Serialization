@@ -32,7 +32,7 @@ namespace Otus.Serialization
 
         [XmlIgnore]
         public string Name { get; set; }
-        [XmlElement("TestPrice")]
+        [XmlElement("Price")]
         public int Price { get; set; }
     }
 
@@ -44,17 +44,17 @@ namespace Otus.Serialization
             var car1 = new Car { Name = "Ниссан", Color = "Blue", Price = 22352 };
             var shop = new AutoShop { Cars = new[] { car, car1 }, ShopType = ShopType.Public };
 
-            var s = new XmlSerializer(typeof(AutoShop));
+            var s = new XmlSerializer(typeof(Car));
 
             using (var fs = new FileStream("demo.xml", FileMode.Create))
             {
-                s.Serialize(fs, shop);
+                s.Serialize(fs, car);
             }
 
             using (var fs = new FileStream("demo.xml", FileMode.Open))
             {
-                var obj = (AutoShop)s.Deserialize(fs);
-                Console.WriteLine(obj.Cars[1].Color);
+                var obj = (Car)s.Deserialize(fs);
+                //Console.WriteLine(obj.Cars[1].Color);
             }
         }
     }
